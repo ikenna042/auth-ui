@@ -1,3 +1,4 @@
+import 'package:auth_ui/Screens/Login/login_screen.dart';
 import 'package:auth_ui/Screens/Welcome/components/background.dart';
 import 'package:auth_ui/components/rounded_button.dart';
 import 'package:auth_ui/constants.dart';
@@ -25,7 +26,13 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.05),
             RoundedButton(
               text: "LOGIN",
-              press: () {},
+              press: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return LoginScreen();
+                      }
+                    ),
+                  );
+                },
             ),
             RoundedButton(
               text: "LOGIN",
